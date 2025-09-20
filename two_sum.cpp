@@ -5,9 +5,12 @@
 using namespace std;
 
 vector<int> two_sum(vector<int>& nums, int target) {
+    
+    //init hashmaps
     unordered_map<int, int> mp;
 
-    for (int i = 0; i < nums.size(); i++) {  // FIXED: < instead of >
+    //iterate
+    for (int i = 0; i < nums.size(); i++) {
         int complement = target - nums[i];
 
         if (mp.find(complement) != mp.end()) {
